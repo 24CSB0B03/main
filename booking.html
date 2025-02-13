@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Hotel Booking</title>
+    <style>
+    
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0.5em 0;
+}
+
+p {
+    margin: 0.5em 0 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: url(truemarine.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.btn {
+    background-color: #d2691e;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a0522d;
+}
+
+/* Sections */
+section {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+#rooms {
+    background-color: #fff;
+}
+
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.room {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.room img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room h3 {
+    color: #d2691e;
+    margin: 0.5em 0;
+}
+
+.room p {
+    padding: 0 1em 1em;
+}
+
+.room:hover {
+    transform: translateY(-10px);
+}
+
+/* About and Contact Sections */
+#about, #contact {
+    background-color: #f4f4f4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #d2691e;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a0522d;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to City Hotel</h1>
+            <p>Your comfort is our priority</p>
+            <a href="#booking" class="btn">Book Now</a>
+        </div>
+    </header>
+
+    <section id="rooms">
+        <h2>Our Rooms</h2>
+        <div class="room-container">
+            <div class="room">
+                <img src="duluxeimg.jpeg" alt="Deluxe Room">
+                <h3>Deluxe Room</h3>
+                <p>Experience luxury in our deluxe rooms.</p>
+            </div>
+            <div class="room">
+                <img src="viewimg.jpeg" alt="Suite">
+                <h3>Suite</h3>
+                <p>Spacious suites with city views.</p>
+            </div>
+            <div class="room">
+                <img src="spaceimg.jpeg" alt="Standard Room">
+                <h3>Standard Room</h3>
+                <p>Comfortable and affordable standard rooms.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Located in the heart of the city, City Hotel offers unparalleled service and amenities...</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 City Hotel. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbai Heritage Sites</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+
+        .card-content p {
+            margin: 0.5rem 0 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>Mumbai Heritage Sites</header>
+
+    <div class="container">
+        <div class="card">
+            <img src="h1.png" alt="Gateway of India">
+            <div class="card-content">
+                
+                <a href="https://mumbaicity.gov.in/tourist-place/gateway-of-india/#:~:text=The%20Gateway%20of%20India%20is%20located%20on%20the%20waterfront%20at,the%20city's%20top%20tourist%20attraction."><h3>Gateway of India</h3></a>
+                <p>Built in 1924, this iconic arch-monument overlooks the Arabian Sea and is a symbol of Mumbai's history.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="h2.jpeg" alt="Chhatrapati Shivaji Terminus">
+            <div class="card-content">
+                <h3>Chhatrapati Shivaji Terminus</h3>
+                <p>A UNESCO World Heritage Site, this Victorian Gothic building is an architectural marvel and a busy railway station.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="h3.jpeg" alt="Elephanta Caves">
+            <div class="card-content">
+                <h3>Elephanta Caves</h3>
+                <p>Located on Elephanta Island, these ancient caves feature intricate sculptures and date back to the 5th century.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="h4.jpeg" alt="Haji Ali Dargah">
+            <div class="card-content">
+                <h3>Haji Ali Dargah</h3>
+                <p>This beautiful mosque and tomb is located on an islet off the coast of Worli and is a renowned pilgrimage site.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

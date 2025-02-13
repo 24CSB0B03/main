@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Info Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: white;
+        }
+        header {
+            background: #d9534f;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0px 15px;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #d9534f;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .panel {
+            background: #292929;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .map {
+            height: 300px;
+            background: url(fire.jpg) no-repeat center;
+            background-size: cover;
+            position: relative;
+            border-radius: 5px;
+        }
+        .stat {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+           
+        }
+        .chart-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .chart {
+            width: 45%;
+            height: 100px;
+            background: #333;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .upload-section {
+            background: #333;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .upload-section h2 {
+            margin-bottom: 15px;
+        }
+        .upload-section input, .upload-section textarea {
+            width: 80%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .upload-section button {
+            background: #d9534f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .upload-section button:hover {
+            background: #c9302c;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            .chart-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .chart {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>Disaster Information Hub</header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#alerts">Alerts</a>
+        <a href="#contacts">Contacts</a>
+        <a href="#tips">Preparedness Tips</a>
+        <a href="#previous-disasters">Previous Disasters</a>
+    </nav>
+    
+    <div class="dashboard">
+        <div class="panel">
+            <h2>Current Wildfires</h2>
+            <p class="stat">37</p>
+            <p>+12 from last week</p>
+            <h3>Wildfire List</h3>
+            <ul>
+                <li>Northridge - 87% contained, 2,147 acres burned</li>
+                <li>Mesa Verde - 17% contained, 13,285 acres burned</li>
+                <li>Blue River - 45% contained, 12,445 acres burned</li>
+            </ul>
+        </div>
+        
+        <div class="panel">
+            <h2>Disaster Map</h2>
+            <div class="map"></div>
+        </div>
+        
+        <div class="panel">
+            <h2>Incidents</h2>
+            <p class="stat">54</p>
+            <p>+15 last 24 hours</p>
+            <h3>Total Active Acres</h3>
+            <div class="chart-container">
+                <div class="chart">Acres Burned</div>
+                <div class="chart">Fires by Cause</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="upload-section">
+        <h2>Submit Disaster Reports</h2>
+        <input type="file" accept="image/*,video/*"><br>
+        <textarea rows="5" placeholder="Describe the situation..."></textarea><br>
+        <button>Submit Report</button>
+    </div>
+    
+    <footer>
+        &copy; 2025 Disaster Info Hub | Stay Safe
+    </footer>
+</body>
+</html>
